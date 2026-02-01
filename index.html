@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For My Love ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+<!-- SCREEN 1 -->
+<div class="screen active" id="screen1">
+    <canvas id="eyeCanvas"></canvas>
+
+    <div class="overlay hidden" id="introText">
+        <h1>Hi LOVE !!! 💗</h1>
+        <button onclick="nextScreen(2)">
+            Let's move to the next STAGE  👉🏻
+        </button>
+    </div>
+</div>
+
+
+
+<!-- SCREEN 2 -->
+<div class="screen" id="screen2">
+    <div class="overlay screen2-content">
+        <h1>WILL YOU BE MY VALENTINE? 💌</h1>
+        <p id="noText"></p>
+
+        <div class="buttons">
+            <button onclick="nextScreen(3)">YES 🥰</button>
+            <button onclick="handleNo()">NO 🥺💔</button>
+        </div>
+    </div>
+</div>
+
+    <!-- SCREEN 3 -->
+<div class="screen dark" id="screen3">
+    <canvas id="heart"></canvas>
+
+    <div class="overlay">
+        <h2>FORGET JUST VALENTINE...</h2>
+        <h1>WILL YOU BE MY FOREVER? ❤️</h1>
+
+        <div class="buttons">
+            <button onclick="finalScreen()">YES ♾️</button>
+            <button id="runaway">NO 😿</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- FINAL SCREEN -->
+<div class="screen" id="screen4">
+    <!-- Curtains -->
+    <div class="curtain left"></div>
+    <div class="curtain right"></div>
+
+    <!-- Content -->
+    <div class="final-content hidden" id="finalContent">
+        <h1>FINALLY the HAPPIEST person ALIVE !!! 🥹❤️</h1>
+        <h2 class="highlight">I REALLY LOVE U SNEHA💖</h2>
+        <p>Forever has Already STARTED !!! ✨</p>
+    </div>
+</div>
+
+
+    <script src="script.js"></script>
+    <script src="heart.js"></script>
+</body>
+</html>

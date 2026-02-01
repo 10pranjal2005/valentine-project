@@ -1,0 +1,345 @@
+@font-face {
+    font-family: 'Algerian';
+    src: url('fonts/ALGER.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: rgb(0, 0, 0);
+    overflow: hidden;
+}
+
+/* ===============================
+   COMMON SCREENS
+=============================== */
+
+.screen {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+}
+
+.screen.active {
+    display: block;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background: #fb0330;
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #f11ba9;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* ===============================
+   SCREEN 1 – IMAGE VORTEX
+=============================== */
+
+#screen1 {
+    position: relative;
+    background: rgb(0, 0, 0);
+    overflow: hidden;
+}
+
+#eyeCanvas {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+#screen1 .overlay {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 30px;
+    text-align: center;
+    transition: opacity 1.5s ease;
+}
+
+#screen1 .overlay h1 {
+    margin-top: 10px;
+}
+
+#screen1 .overlay button {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.visible {
+    opacity: 1;
+}
+
+#screen1 .overlay h1 {
+    font-size: 70px;
+    font-family: 'Playfair Display', serif;
+    color: #f591a3;
+    text-shadow:
+        0 0 10px rgba(146, 0, 27, 0.8),
+        0 0 20px rgba(201, 0, 37, 0.6),
+        0 0 10px rgba(247, 0, 45, 0.8),
+        0 0 10px rgba(243, 102, 128, 0.8);
+    word-spacing: 20px;
+}
+
+/* ===============================
+   SCREEN 2 – STATIC BACKGROUND
+=============================== */
+
+#screen2 {
+    background: url("background.jpg") center / cover no-repeat;
+    position: relative;
+    color: rgb(255, 255, 255);
+
+   
+
+    /* ✨ GLOW EFFECT */
+    text-shadow:
+        0 0 8px rgba(141, 0, 0, 0.6),
+        0 0 16px rgba(206, 0, 0, 0.5),
+        0 0 24px rgba(233, 3, 3, 0.4),
+        0 0 24px rgba(247, 21, 21, 0.4),
+        0 0 24px rgba(231, 63, 63, 0.4);
+}
+
+
+#screen2::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+#screen2 .screen2-content {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 20px;
+}
+
+#screen2 h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+/* 🔴 UPDATED NO MESSAGE STYLE */
+#noText {
+    min-height: 30px;
+    margin-bottom: 20px;
+
+    font-size: 26px;                 /* bigger */
+    font-weight: 700;                /* bold */
+    font-family: 'Playfair Display', serif; /* new font */
+    color: #ea8a8a;                  /* red */
+
+    text-shadow:
+        0 0 8px rgba(206, 0, 0, 0.7);
+}
+
+/* ===============================
+   SCREEN 3 – HEART ANIMATION
+=============================== */
+
+#screen3 {
+    position: relative;
+    background: black;
+    color: white;
+    overflow: hidden;
+}
+
+#heart {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+#screen3 .overlay {
+    position: relative;
+    z-index: 2;
+    padding-top: 18vh;
+    text-align: center;
+}
+
+#screen3 .overlay h2 {
+    letter-spacing: 3px;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+#screen3 .overlay h1 {
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+/* ===============================
+   FINAL SCREEN
+=============================== */
+
+.highlight {
+    color: #bb0022;
+    font-size: 32px;
+
+    text-shadow:
+        0 0 10px rgb(255, 255, 255),
+        0 0 10px rgb(255, 255, 255),
+        0 0 10px rgb(255, 162, 179),
+        0 0 20px rgb(255, 69, 103),
+        0 0 10px rgb(255, 20, 63),
+        0 0 10px rgb(255, 0, 47);
+}
+
+/* ===============================
+   FINAL SCREEN – REAL CURTAIN EFFECT
+=============================== */
+
+#screen4 {
+    position: relative;
+    background: url("last.jpeg") center / cover no-repeat;
+    overflow: hidden;
+    color: rgb(0, 2, 148);
+        text-shadow:
+        0 0 8px rgb(2, 124, 255),
+        0 0 8px rgb(43, 186, 248),
+        0 0 8px rgb(68, 211, 255),
+        0 0 8px rgb(110, 228, 255);
+}
+
+.curtain {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 3;
+    background: linear-gradient(
+        90deg,
+        #8b0000,
+        #ff1a1a,
+        #8b0000
+    );
+    transition: clip-path 2.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.curtain.left {
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+}
+
+.curtain.right {
+    right: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
+}
+
+#screen4.open .curtain.left {
+    clip-path: polygon(0 0, 20% 0, 0% 100%, 0 100%);
+}
+
+#screen4.open .curtain.right {
+    clip-path: polygon(80% 0, 100% 0, 100% 100%, 100% 100%);
+}
+
+.final-content {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 20px;
+    transition: opacity 1.2s ease;
+}
+
+.curtain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at 50% 50%,
+        rgba(255,255,255,0.15),
+        transparent 60%
+    );
+    mix-blend-mode: overlay;
+}
+
+/* ===============================
+   FINAL SCREEN TEXT POSITIONING
+=============================== */
+
+/* Top line */
+#screen4 .final-content h1 {
+    position: absolute;
+    top: 40px;
+
+    font-size: 45px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+/* Middle line (already centered via flex) */
+#screen4 .final-content .highlight {
+        font-family: 'Algerian', serif;
+    font-size: 40px;
+    margin: auto 0;
+    word-spacing: 15px;
+}
+
+/* Bottom line */
+#screen4 .final-content p {
+    position: absolute;
+    bottom: 40px;
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    font-weight: 600;
+
+        color: rgb(255, 255, 255);
+    text-shadow:         0 0 16px rgb(252, 248, 38),
+        0 0 24px rgba(249, 246, 85, 0.6),
+        0 0 24px rgba(246, 244, 117, 0.6),
+        0 0 24px rgba(251, 250, 194, 0.6);;
+
+}
+
