@@ -267,3 +267,9 @@ runaway.addEventListener("mouseover", () => {
     runaway.style.top = y + "px";
 });
 
+window.addEventListener("beforeunload", function (e) {
+    const message = "Please don’t leave yet 🥺❤️ I have something important for you…";
+    e.preventDefault();
+    e.returnValue = message;
+    return message;
+});
