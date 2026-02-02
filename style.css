@@ -342,4 +342,89 @@ button:hover {
         0 0 24px rgba(251, 250, 194, 0.6);;
 
 }
+/* ===============================
+   📱 MOBILE RESPONSIVE FIXES
+=============================== */
+
+@media (max-width: 768px) {
+
+    /* Screen 1 */
+    #screen1 .overlay h1 {
+        font-size: 42px;
+        word-spacing: 10px;
+    }
+
+    #screen1 .overlay button {
+        bottom: 25px;
+        font-size: 16px;
+        padding: 12px 22px;
+    }
+
+    /* Screen 2 */
+    #screen2 h1 {
+        font-size: 28px;
+    }
+
+    #noText {
+        font-size: 20px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    button {
+        width: 85%;
+        max-width: 280px;
+    }
+
+    /* Screen 3 */
+    #screen3 .overlay h1 {
+        font-size: 34px;
+    }
+
+    #screen3 .overlay h2 {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    /* Final Screen */
+    #screen4 .final-content h1 {
+        font-size: 26px;
+        top: 20px;
+        padding: 0 10px;
+    }
+
+    #screen4 .final-content .highlight {
+        font-size: 28px;
+        word-spacing: 8px;
+    }
+
+    #screen4 .final-content p {
+        font-size: 24px;
+        bottom: 20px;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    #screen1 .overlay h1 {
+        font-size: 34px;
+    }
+
+    #screen2 h1 {
+        font-size: 24px;
+    }
+
+    #screen3 .overlay h1 {
+        font-size: 28px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+}
 

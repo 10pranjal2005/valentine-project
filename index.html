@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>For My Love ❤️</title>
+
+    <!-- ✅ REQUIRED FOR MOBILE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-
 
 <!-- SCREEN 1 -->
 <div class="screen active" id="screen1">
@@ -16,12 +18,10 @@
     <div class="overlay hidden" id="introText">
         <h1>Hi LOVE !!! 💗</h1>
         <button onclick="nextScreen(2)">
-            Let's move to the next STAGE  👉🏻
+            Let's move to the next STAGE 👉🏻
         </button>
     </div>
 </div>
-
-
 
 <!-- SCREEN 2 -->
 <div class="screen" id="screen2">
@@ -36,7 +36,7 @@
     </div>
 </div>
 
-    <!-- SCREEN 3 -->
+<!-- SCREEN 3 -->
 <div class="screen dark" id="screen3">
     <canvas id="heart"></canvas>
 
@@ -51,14 +51,11 @@
     </div>
 </div>
 
-
 <!-- FINAL SCREEN -->
 <div class="screen" id="screen4">
-    <!-- Curtains -->
     <div class="curtain left"></div>
     <div class="curtain right"></div>
 
-    <!-- Content -->
     <div class="final-content hidden" id="finalContent">
         <h1>FINALLY the HAPPIEST person ALIVE !!! 🥹❤️</h1>
         <h2 class="highlight">I REALLY LOVE U SNEHA💖</h2>
@@ -66,8 +63,7 @@
     </div>
 </div>
 
-
-    <script src="script.js"></script>
-    <script src="heart.js"></script>
+<script src="script.js"></script>
+<script src="heart.js"></script>
 </body>
 </html>
